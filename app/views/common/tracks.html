@@ -7,7 +7,8 @@
                           data-song-url="{{ data.stream_url }}"
                           data-song-thumbnail="{{ data.artwork_url }}"
                           data-song-title="{{ data.title }}"
-                          data-song-user="{{ data.user.username }}" >
+                          data-song-user="{{ data.user.username }}"
+                          data-song-id="{{ data.id }}" >
 
                         <i class="fa fa-play"></i>
                         <i class="fa fa-pause"></i>
@@ -17,7 +18,7 @@
 
 <section class="songList_item_inner">
     <h2 class="songList_item_song_tit" title="{{ data.title }}">{{ data.title }}</h2>
-    
+
     <h3 class="songList_item_song_user">
       <a ui-sref="profile({id: {{data.user.id}}})">{{ data.user.username }}</a>
       <span ng-controller="AppCtrl" class="songList_item_song_length"> {{ formatSongDuration (data.duration) }}</span>
